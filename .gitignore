@@ -1,0 +1,7 @@
+*.o
+*.pcm
+exe-clang
+exe-gcc
+gcm.cache/
+person_gcc_exe
+
