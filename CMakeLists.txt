@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.28)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(cpp20-modules-example CXX)
@@ -23,13 +23,7 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	if (CMAKE_CXX_COMPILER_VERSION LESS 14 )
 		message(FATAL_ERROR "GCC Version < 14 not supported")
 	endif()
-    # SET(SYSTEM_HEADER "${CMAKE_CURRENT_BINARY_DIR}/gcm.cache/./usr/include/c++/${CMAKE_CXX_COMPILER_VERSION}/iostream.gcm")
 endif()
-
-# add_custom_target(system_headers
-#   BYPRODUCTS "${SYSTEM_HEADER}"
-#   COMMAND g++ -std=c++20 -fmodules-ts -c -x c++-system-header iostream
-# )
 
 add_executable(main main.cpp)
 target_sources(main PUBLIC
@@ -42,7 +36,6 @@ target_sources(main PUBLIC
 )
 
 add_library(person STATIC)
-# target_compile_definitions(person PUBLIC HEADER_STDLIB=1)
 target_sources(person PUBLIC
   FILE_SET cxx_modules TYPE CXX_MODULES
   BASE_DIRS
@@ -53,10 +46,7 @@ target_sources(person PUBLIC
     person/person_function.cpp
 )
 
-# add_dependencies(person system_headers)
-
 add_executable(person_main)
-# target_compile_definitions(person_main PUBLIC HEADER_STDLIB=1)
 target_link_libraries(person_main person)
 
 target_sources(person_main PRIVATE

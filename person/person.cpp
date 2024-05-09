@@ -2,7 +2,7 @@ module;
 // include stdlib stuff needs to always come before import modules!
 #include <iostream>
 
-export module data_type;
+export module data_type_person;
 
 export namespace data_type
 {

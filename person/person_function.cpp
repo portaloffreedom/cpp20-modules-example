@@ -1,7 +1,7 @@
 module;
 // include stdlib stuff needs to always come before import modules!
 #include <iostream>
-import data_type;
+import data_type_person;
 
 export module data_type_extra;
 
