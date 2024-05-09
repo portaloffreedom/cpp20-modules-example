@@ -3,6 +3,8 @@ IF_LSP(module;)
 // include stdlib stuff needs to always come before import modules!
 #include <iostream>
 import data_type;
+import data_type_extra;
+import data_type_master;
 
 IF_LSP(export module main;)
 using namespace data_type;
@@ -30,9 +32,9 @@ int main(int argc, char *argv[])
 	// person2.
 	person2.printPerson();
 
-	// print_person_external(person);
-	// std::cout << "----\n";
-	// print_person_external(person2);
+	print_person_external(person);
+	std::cout << "----\n";
+	data_type::print_person_external(person2);
 
 	return 0;
 }

@@ -50,7 +50,7 @@ target_sources(person PUBLIC
   FILES
     person/module.cppm
     person/person.cpp
-    # person/person_function.cpp
+    person/person_function.cpp
 )
 
 # add_dependencies(person system_headers)

@@ -6,7 +6,7 @@ module;
 // #endif
 // #include <string>
 export import data_type;
-// export import data_type_extra;
+export import data_type_extra;
 
 
 export module data_type_master;
