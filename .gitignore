@@ -4,4 +4,7 @@ exe-clang
 exe-gcc
 gcm.cache/
 person_gcc_exe
+person_gcc_oneline_exe
 
+/.cache/
+/build*

@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-DLSP_CLANGD]
