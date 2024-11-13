@@ -1,3 +1,7 @@
+# Archived 
+moved to https://codeberg.org/portaloffreedom/pp20-modules-example/src/branch/main/person
+
+---------------
 # CPP20 modules example
 Test/Template on how to work with modules in c++ (focusing mostly on cmake)
 
